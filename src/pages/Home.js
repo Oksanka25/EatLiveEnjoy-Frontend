@@ -14,7 +14,7 @@ function Home(props) {
     const loaded = () => {
         return props.recipes.map((recipe) => (
             <div key={recipe._id}>
-                <Link to={"/recipes/"}>
+                <Link to={`/recipes/${recipe._id}`}>
                     <h1> {recipe.recipe.label}</h1>
                     <img src={recipe.recipe.image} alt={recipe.recipe.label} />
                 </Link>
