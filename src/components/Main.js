@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function Main(props) {
 
     const [recipes, setRecipes] = useState(null);
-    const URL = "http://localhost:4005/recipes";
+    const URL = "http://localhost:4005/recipes/";
 
     const getRecipes = () => {
         fetch(URL)
@@ -55,10 +55,13 @@ function Main(props) {
         <>
             <main>
                 <Routes>
-                    <Route path="/recipes" element={<Home recipes={recipes} getRecipes={getRecipes} createRecipe={createRecipe} />}>
+                    <Route path="/recipes/" element={<Home recipes={recipes} getRecipes={getRecipes} createRecipe={createRecipe} />}>
                     </Route>
                     <Route path="/about" element={<About />} >
                     </Route>
+                    {/* <Route path="recipes/edit" element={<Edit />} >
+                    </Route> */}
+
                     <Route path="/recipes/:id" element={<ShowPage recipes={recipes} updateRecipe={updateRecipe} deleteRecipe={deleteRecipe} />}>
                     </Route>
                 </Routes>

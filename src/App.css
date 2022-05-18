@@ -5,7 +5,8 @@ a:link {
 }
 
 body {
-  background-color: #cbf3f0
+  background-color: #cbf3f0;
+  padding: 15px;
 }
 
 h1 {
@@ -15,11 +16,40 @@ h1 {
 .navbar,
 .logo,
 .about {
+  border-radius: 5px;
   background-color: #FFBF69;
   color: #289f93;
   font-family: 'Fjalla One', sans-serif;
+  padding: 5px;
 }
 
 .about {
   padding-right: 10px;
+}
+
+button {
+  box-shadow: inset 0px 1px 0px 0px #fff6af;
+  background: linear-gradient(to bottom, #ffec64 5%, #FFBF69 100%);
+  background-color: #CBF3F0;
+  border-radius: 6px;
+  border: 1px solid #FF9F1C;
+  display: inline-block;
+  cursor: pointer;
+  color: #333333;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #ffab23 5%, #FFFFFF 100%);
+  background-color: #FF9F1C;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
 }

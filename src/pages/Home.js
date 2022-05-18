@@ -10,7 +10,7 @@ function Home(props) {
     const [newForm, setNewForm] = useState({
         label: "",
         image: "",
-        ingredients: "",
+        ingredientLines: "",
     });
 
     const handleChange = (event) => {
@@ -19,11 +19,11 @@ function Home(props) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.createRecipe(newForm);
+        props.createRecipe({ recipe: newForm });
         setNewForm({
             label: "",
             image: "",
-            ingredients: "",
+            ingredientLines: "",
         });
     };
 
@@ -45,24 +45,24 @@ function Home(props) {
     return (
         <>
             <form onSubmit={handleSubmit} className='mb-3'>
-                <input className='form-control'
+                <input className='form-control mb-1'
                     type="text"
                     value={newForm.label}
                     name="label"
                     placeholder="label"
                     onChange={handleChange}
                 />
-                <input className='form-control'
+                <input className='form-control mb-1'
                     type="text"
                     value={newForm.image}
                     name="image"
                     placeholder="image URL"
                     onChange={handleChange}
                 />
-                <input className='form-control'
+                <input className='form-control mb-3'
                     type="text"
-                    value={newForm.ingredients}
-                    name="ingredients"
+                    value={newForm.ingredientLines}
+                    name="ingredientLines"
                     placeholder="ingredients"
                     onChange={handleChange}
                 />
