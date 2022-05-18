@@ -5,7 +5,10 @@ function Header() {
     return (
         <nav className="nav">
             <Link to="/recipes">
-                <div>Recipes App</div>
+                <div>EatLiveEnjoy</div>
+            </Link>
+            <Link to="/about">
+                <div> About </div>
             </Link>
         </nav>
     )

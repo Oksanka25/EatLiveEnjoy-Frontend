@@ -1,13 +1,41 @@
-import React from 'react';
+import React from 'react'
+import '../App.css';
+import ShowPage from '../pages/ShowPage';
+import About from '../pages/About';
+import Home from '../pages/Home';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 
-function Main() {
 
+function Main(props) {
+
+    const [recipes, setRecipes] = useState(null);
+    const URL = "http://localhost:4005/recipes/";
+
+    const getRecipes = () => {
+        fetch(URL)
+            .then(response => response.json())
+            .then((result) => setRecipes(result))
+    }
+    useEffect(() => getRecipes(), []);
     return (
-        <div>Main</div>
+        <>
+            <main>
+                <Routes>
+                    <Route path="/recipes" element={<Home recipes={recipes} getRecipes={getRecipes} />}>
+                    </Route>
+                    <Route path="/about" element={<About />} >
+                    </Route>
+                    <Route path="/recipes/:id" element={<ShowPage />}>
+                    </Route>
+
+                </Routes>
+            </main>
+        </>
     )
 }
+
 
 export default Main
