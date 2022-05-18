@@ -31,7 +31,7 @@ function Main(props) {
         getRecipes();
     };
 
-    const updateRecipes = async (recipe, id) => {
+    const updateRecipe = async (recipe, id) => {
         await fetch(URL + id, {
             method: "put",
             headers: {
@@ -39,11 +39,10 @@ function Main(props) {
             },
             body: JSON.stringify(recipe),
         })
-
         getRecipes()
     }
 
-    const deleteRecipes = async id => {
+    const deleteRecipe = async id => {
         await fetch(URL + id, {
             method: "delete",
         })
@@ -60,7 +59,7 @@ function Main(props) {
                     </Route>
                     <Route path="/about" element={<About />} >
                     </Route>
-                    <Route path="/recipes/:id" element={<ShowPage recipes={recipes} updateRecipes={updateRecipes} deleteRecipes={deleteRecipes} />}>
+                    <Route path="/recipes/:id" element={<ShowPage recipes={recipes} updateRecipe={updateRecipe} deleteRecipe={deleteRecipe} />}>
                     </Route>
                 </Routes>
             </main>
