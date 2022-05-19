@@ -11,7 +11,7 @@ import { Routes, Route } from 'react-router-dom';
 function Main(props) {
 
     const [recipes, setRecipes] = useState(null);
-    const URL = "http://localhost:4005/recipes/";
+    const URL = "https://eat-live-enjoy.herokuapp.com/recipes/";
 
     const getRecipes = () => {
         fetch(URL)

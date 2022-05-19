@@ -42,6 +42,7 @@ function Home(props) {
         return <h1>Loading.........</h1>
     };
 
+
     return (
         <>
             <form onSubmit={handleSubmit} className='mb-3'>
@@ -50,6 +51,13 @@ function Home(props) {
                     value={newForm.label}
                     name="label"
                     placeholder="label"
+                    onChange={handleChange}
+                />
+                <input className='form-control mb-1'
+                    type="text"
+                    value={newForm.cuisineType}
+                    name="cuisineType"
+                    placeholder="cuisine"
                     onChange={handleChange}
                 />
                 <input className='form-control mb-1'
@@ -68,8 +76,9 @@ function Home(props) {
                 />
                 <button id="create"> Create Recipe </button>
             </form>
-
-            {props.recipes ? loaded() : loading()}
+            <div className='recipesList'>
+                {props.recipes ? loaded() : loading()}
+            </div>
         </>
     )
 }

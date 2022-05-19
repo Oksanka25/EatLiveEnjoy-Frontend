@@ -53,3 +53,10 @@ button:active {
   position: relative;
   top: 1px;
 }
+
+/* .recipesList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(15, 5vw);
+  grid-gap: 15px;
+} */

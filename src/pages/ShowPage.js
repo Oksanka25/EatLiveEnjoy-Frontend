@@ -24,7 +24,7 @@ function ShowPage(props) {
         navigate("/recipes")
     }
     return (
-        <div>
+        <>
             <h1>{recipe.recipe.label}</h1>
             <h2> Cuisine: {recipe.recipe.cuisineType}</h2>
             <h3> Ingredients:</h3>
@@ -35,28 +35,38 @@ function ShowPage(props) {
             </ul>
 
             <img src={recipe.recipe.image} alt={recipe.recipe.label} />
+
             <h3>Diet Labels: </h3>
             <ul>
                 {recipe.recipe.dietLabels.map((dietLabel, idx) => {
                     return <li key={idx}> {dietLabel}</li>
                 })}
             </ul>
-            <h3>Health Labels: </h3>
+            <div>
+                <h3>Health Labels: </h3>
+                <ul>
+                    {recipe.recipe.healthLabels.map((healthLabel, idx) => {
+                        return <li key={idx}> {healthLabel}</li>
+                    })}
+                </ul>
+            </div>
+            <h3>Cautions: </h3>
             <ul>
-                {recipe.recipe.healthLabels.map((healthLabel, idx) => {
-                    return <li key={idx} className='healthLabels'> {healthLabel}</li>
+                {recipe.recipe.cautions.map((caution, idx) => {
+                    return <li key={idx} className='cautions'> {caution}</li>
                 })}
             </ul>
-            <p>Cautions: {recipe.recipe.cautions}</p>
-            <p>Calories: {Math.floor(recipe.recipe.calories)}</p>
+            <h3>Calories: {Math.floor(recipe.recipe.calories)} </h3>
 
 
 
-            <button id="delete" onClick={removeRecipe}>
+
+            <button className='mb-5 mt-5' id="delete" onClick={removeRecipe}>
                 Delete Recipe
             </button>
 
             <form onSubmit={handleSubmit}>
+                <label className='form-label'> Name</label>
                 <input className='form-control mb-1 mt-2'
                     type="text"
                     value={editForm.label}
@@ -64,6 +74,15 @@ function ShowPage(props) {
                     placeholder="label"
                     onChange={handleChange}
                 />
+                <label className='form-label'> Cuisine</label>
+                <input className='form-control mb-1'
+                    type="text"
+                    value={editForm.cuisineType}
+                    name="cuisineType"
+                    placeholder="cuisine"
+                    onChange={handleChange}
+                />
+                <label className='form-label'> Image(URL)</label>
                 <input className='form-control mb-1'
                     type="text"
                     value={editForm.image}
@@ -71,16 +90,34 @@ function ShowPage(props) {
                     placeholder="image URL"
                     onChange={handleChange}
                 />
-                <input className='form-control mb-3'
+                <label className='form-label'> Ingredients </label>
+                <input className='form-control mb-1'
                     type="text"
                     value={editForm.ingredientLines}
                     name="ingredientLines"
                     placeholder="ingredients"
                     onChange={handleChange}
                 />
+                <label className='form-label'> Diet</label>
+                <input className='form-control mb-1'
+                    type="text"
+                    value={editForm.dietLabels}
+                    name="dietLabels"
+                    placeholder="diet"
+                    onChange={handleChange}
+                />
+                <label className='form-label'> Calories </label>
+
+                <input className='form-control mb-3'
+                    type="text"
+                    value={editForm.calories}
+                    name="calories"
+                    placeholder="calories"
+                    onChange={handleChange}
+                />
                 <button type="submit" id="update" className='mb=5'> Update Recipe </button>
             </form>
-        </div>
+        </>
     )
 }
 
