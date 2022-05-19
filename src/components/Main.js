@@ -5,6 +5,7 @@ import About from '../pages/About';
 import Home from '../pages/Home';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import NewRecipe from '../pages/NewRecipe';
 
 
 
@@ -53,16 +54,51 @@ function Main(props) {
         <>
             <main>
                 <Routes>
-                    <Route path="/recipes/" element={<Home recipes={recipes} getRecipes={getRecipes} createRecipe={createRecipe} />}>
-                    </Route>
-                    <Route path="/about" element={<About />} >
-                    </Route>
-                    <Route path="/recipes/:id" element={<ShowPage recipes={recipes} updateRecipe={updateRecipe} deleteRecipe={deleteRecipe} />}>
-                    </Route>
+                    <Route
+                        path="/"
+                        element={
+                            <Home
+                                recipes={recipes}
+                                getRecipes={getRecipes}
+                                createRecipe={createRecipe}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/recipes"
+                        element={
+                            <Home
+                                recipes={recipes}
+                                getRecipes={getRecipes}
+                                createRecipe={createRecipe}
+                            />
+                        }
+                    />
+                    <Route path="/about" element={<About />} />
+                    <Route
+                        path="/new-recipe"
+                        element={
+                            <NewRecipe
+                                recipes={recipes}
+                                getRecipes={getRecipes}
+                                createRecipe={createRecipe}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/recipes/:id"
+                        element={
+                            <ShowPage
+                                recipes={recipes}
+                                updateRecipe={updateRecipe}
+                                deleteRecipe={deleteRecipe}
+                            />
+                        }
+                    />
                 </Routes>
             </main>
         </>
-    )
+    );
 }
 
 

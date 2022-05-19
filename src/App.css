@@ -54,9 +54,89 @@ button:active {
   top: 1px;
 }
 
-/* .recipesList {
+.recipes-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(15, 5vw);
+  grid-template-rows: repeat(8, auto);
   grid-gap: 15px;
-} */
+}
+
+/*  Create New */
+.recipe-form,
+.input-group {
+  width: 100%
+}
+
+.recipe-input {
+  flex-direction: column;
+}
+
+/* EatLiveEnjoy*/
+.search-button {
+  height: fit-content;
+}
+
+.recipe-item {
+  background-color: #fad29d;
+  padding: 0.2em;
+  border-radius: 0.3em;
+}
+
+.recipe-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-item-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.recipe-title {
+  height: 100%;
+  color: #000;
+  display: block;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.2em;
+  padding: 0.1em;
+}
+
+/* Show Page */
+
+.recipe-info-image>img {
+  max-width: 500px;
+  object-fit: contain;
+}
+
+.recipe-info {
+  display: flex;
+  gap: 2em;
+}
+
+.labels {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: fit-content;
+}
+
+.labels>li {
+  background-color: #2EC4B6;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 3px 16px;
+  border-radius: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid #1c877c;
+}
