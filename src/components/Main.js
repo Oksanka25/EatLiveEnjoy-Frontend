@@ -5,7 +5,6 @@ import About from '../pages/About';
 import Home from '../pages/Home';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Link } from "react-router-dom";
 
 
 
@@ -46,7 +45,6 @@ function Main(props) {
         await fetch(URL + id, {
             method: "delete",
         })
-
         getRecipes()
     }
 
@@ -59,9 +57,6 @@ function Main(props) {
                     </Route>
                     <Route path="/about" element={<About />} >
                     </Route>
-                    {/* <Route path="recipes/edit" element={<Edit />} >
-                    </Route> */}
-
                     <Route path="/recipes/:id" element={<ShowPage recipes={recipes} updateRecipe={updateRecipe} deleteRecipe={deleteRecipe} />}>
                     </Route>
                 </Routes>

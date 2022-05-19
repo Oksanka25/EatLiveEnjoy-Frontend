@@ -10,13 +10,13 @@ function ShowPage(props) {
     const [editForm, setEditForm] = useState(recipe)
 
     const handleChange = event => {
-        setEditForm({ ...editForm, [event.target.label]: event.target.value })
+        setEditForm({ ...editForm, [event.target.name]: event.target.value })
     }
 
     const handleSubmit = event => {
         event.preventDefault()
-        props.updateRecipe(editForm, id)
-        navigate('/recipes')
+        props.updateRecipe({ recipe: editForm }, id)
+        navigate(`/recipes/${id}`)
     }
 
     const removeRecipe = () => {
@@ -60,7 +60,7 @@ function ShowPage(props) {
                 <input className='form-control mb-1 mt-2'
                     type="text"
                     value={editForm.label}
-                    name="name"
+                    name="label"
                     placeholder="label"
                     onChange={handleChange}
                 />
@@ -74,13 +74,12 @@ function ShowPage(props) {
                 <input className='form-control mb-3'
                     type="text"
                     value={editForm.ingredientLines}
-                    name="title"
+                    name="ingredientLines"
                     placeholder="ingredients"
                     onChange={handleChange}
                 />
                 <button type="submit" id="update" className='mb=5'> Update Recipe </button>
             </form>
-            <h1></h1>
         </div>
     )
 }
