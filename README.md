@@ -1,70 +1,45 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### About the Project
+EatLiveEnjoy is a website where you can find various recipes just like in your grandma cook book but much easier to navigate. You can read, edit, and delete a recipe and add a new recipe. Each particular recipe includes nutrition information for your convenience.
 
 ### Deployment
+- Backend deployed to Heroku: https://eat-live-enjoy.herokuapp.com/
+- Frontend deployed to Netlify: https://eat-live-enjoy.netlify.app/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Author
+[Oksana Kalyniak](https://github.com/Oksanka25)
 
-### `npm run build` fails to minify
+### Built With
+- HTML
+- CSS
+- Javascript
+- React
+- [Bootstrap](https://getbootstrap.com/)
+- Node.js
+- Express
+- MongoDB
+- Mongoose
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Link to the API that was used as a seed data for the backend
+https://developer.edamam.com/edamam-docs-recipe-api
+
+### User Stories
+- As a user, I should be able to search a recipe by the ingredient name or name of the dish.
+- As a user, I should be able to open the recipe I’m interested in and get more expanded information (image, ingredients, nutrition facts).
+- As a user, I should be able to add a new recipe.
+- As a user, I should be able to edit or delete the recipe.
+- As a user, I should be able to have a return button from the recipe page.
+- As a user, I should be able to have a search option not only on the home page but also on the search results page.
+
+### MVP Goals
+-  Have a search that works;
+-  Show a few random dish images on the home page;
+-  Have a separate show page for each recipe;
+-  Can edit and delete a chosen recipe;
+-  Can add a new recipe.
+
+### Stretch Goals / Future Goals
+- Have an auth to create an account and login;
+- Can save a recipe to the favorite list;
+- Have a search with dropdown options like cuisine, diet, allergies, etc.
+
+
