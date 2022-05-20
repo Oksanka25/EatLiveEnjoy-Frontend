@@ -42,4 +42,9 @@ https://developer.edamam.com/edamam-docs-recipe-api
 - Can save a recipe to the favorite list;
 - Have a search with dropdown options like cuisine, diet, allergies, etc.
 
+### Images
+![image](https://user-images.githubusercontent.com/101350351/169440520-05056839-dad8-4310-a493-777be5e9df83.png)
+![image](https://user-images.githubusercontent.com/101350351/169441181-b4fd303e-1497-4220-a55b-153ec6c6deff.png)
+
+
 
