@@ -94,7 +94,6 @@ function ShowPage(props) {
                     type="text"
                     value={editForm.label}
                     name="label"
-                    placeholder="label"
                     onChange={handleChange}
                 />
                 <label className="form-label"> Cuisine</label>
@@ -103,7 +102,6 @@ function ShowPage(props) {
                     type="text"
                     value={editForm.cuisineType}
                     name="cuisineType"
-                    placeholder="cuisine"
                     onChange={handleChange}
                 />
                 <label className="form-label"> Image(URL)</label>
@@ -112,7 +110,6 @@ function ShowPage(props) {
                     type="text"
                     value={editForm.image}
                     name="image"
-                    placeholder="image URL"
                     onChange={handleChange}
                 />
                 <label className="form-label"> Ingredients </label>
@@ -121,26 +118,31 @@ function ShowPage(props) {
                     type="text"
                     value={editForm.ingredientLines}
                     name="ingredientLines"
-                    placeholder="ingredients"
                     onChange={handleChange}
                 />
-                <label className="form-label"> Diet</label>
+                <label className="form-label"> Health Labels: </label>
                 <input
                     className="form-control mb-1"
                     type="text"
-                    value={editForm.dietLabels}
-                    name="dietLabels"
-                    placeholder="diet"
+                    value={editForm.healthLabels}
+                    name="healthLabels"
                     onChange={handleChange}
                 />
-                <label className="form-label"> Calories </label>
+                <label className="form-label"> Cautions: </label>
+                <input
+                    className="form-control mb-1"
+                    type="text"
+                    value={editForm.cautions}
+                    name="cautions"
+                    onChange={handleChange}
+                />
 
+                <label className="form-label"> Calories: </label>
                 <input
                     className="form-control mb-3"
                     type="text"
                     value={editForm.calories}
                     name="calories"
-                    placeholder="calories"
                     onChange={handleChange}
                 />
                 <button type="submit" id="update" className="mb=5">
