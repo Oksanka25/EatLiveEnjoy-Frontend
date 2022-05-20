@@ -13,11 +13,12 @@ EatLiveEnjoy is a website where you can find various recipes just like in your g
 - CSS
 - Javascript
 - React
-- [Bootstrap](https://getbootstrap.com/)
 - Node.js
 - Express
 - MongoDB
 - Mongoose
+- [Bootstrap](https://getbootstrap.com/)
+- Grid
 
 ### Link to the API that was used as a seed data for the backend
 https://developer.edamam.com/edamam-docs-recipe-api
