@@ -60,16 +60,42 @@ function NewRecipe(props) {
               onChange={handleChange}
             />
             <input
-              className="form-control mb-3"
+              className="form-control mb-1"
               type="text"
               value={newForm.ingredientLines}
               name="ingredientLines"
               placeholder="ingredients"
               onChange={handleChange}
             />
+            <input
+              className="form-control mb-1"
+              type="text"
+              value={newForm.healthLabels}
+              name="healthLabels"
+              placeholder="health labels"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="d-flex input-group">
+            <input
+              className="form-control me-1 mb-1"
+              type="text"
+              value={newForm.cautions}
+              name="cautions"
+              placeholder="cautions"
+              onChange={handleChange}
+            />
+            <input
+              className="form-control mb-1"
+              type="text"
+              value={newForm.calories}
+              name="calories"
+              placeholder="calories"
+              onChange={handleChange}
+            />
           </div>
         </div>
-        <button className="" id="create">
+        <button className="mt-5" id="create">
           {" "}
           Create Recipe{" "}
         </button>
